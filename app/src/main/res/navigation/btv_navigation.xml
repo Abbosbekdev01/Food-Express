@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/btv_navigation"
+    app:startDestination="@id/homeFragment2">
+
+    <fragment
+        android:id="@+id/homeFragment2"
+        android:name="uz.crud.foodexpressapplication.screens.bottomNavigationViews.homFragment.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_homeFragment2_to_restaurantDetailFragment"
+            app:destination="@id/restaurantDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/cartFragment2"
+        android:name="uz.crud.foodexpressapplication.screens.bottomNavigationViews.cartFragment.CartFragment"
+        android:label="fragment_cart"
+        tools:layout="@layout/fragment_cart" />
+    <fragment
+        android:id="@+id/mainFragment3"
+        android:name="uz.crud.foodexpressapplication.screens.mainFragment.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment3_to_homeFragment2"
+            app:destination="@id/homeFragment2" />
+        <action
+            android:id="@+id/action_mainFragment3_to_cartFragment2"
+            app:destination="@id/cartFragment2" />
+        <action
+            android:id="@+id/action_mainFragment3_to_mapFragment2"
+            app:destination="@id/mapFragment2" />
+        <action
+            android:id="@+id/action_mainFragment3_to_profileFragment2"
+            app:destination="@id/profileFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/mapFragment2"
+        android:name="uz.crud.foodexpressapplication.screens.bottomNavigationViews.mapFragment.MapFragment"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" />
+    <fragment
+        android:id="@+id/profileFragment2"
+        android:name="uz.crud.foodexpressapplication.screens.bottomNavigationViews.profileFragment.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/restaurantDetailFragment"
+        android:name="uz.crud.foodexpressapplication.screens.restaurant.detail.RestaurantDetailFragment"
+        android:label="fragment_restaurant_detail"
+        tools:layout="@layout/fragment_restaurant_detail" />
+</navigation>

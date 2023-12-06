@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/back_main_gradient"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_6sdp"
+        android:orientation="vertical">
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_130sdp"
+            android:layout_margin="@dimen/_3sdp"
+            app:cardCornerRadius="@dimen/_18sdp"
+            app:cardElevation="@dimen/_3sdp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/ic_food_2" />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:singleLine="true"
+                android:text="st Mustaqillik,4,Fergana"
+                android:textColor="@color/whit"
+                android:textSize="@dimen/_14ssp" />
+
+            <ImageView
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/ic_right_1" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_weight="1"
+                android:fontFamily="@font/amita_bold"
+                android:singleLine="true"
+                android:text="40000 so'm"
+                android:textColor="@color/color_accent"
+                android:textSize="@dimen/_14ssp" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@color/grey_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/_22sdp"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/ic_minise"
+                app:tint="@color/whit" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:fontFamily="@font/atomic_age"
+                android:singleLine="true"
+                android:text="2"
+                android:textColor="@color/color_accent"
+                android:textSize="@dimen/_16ssp" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="@dimen/_22sdp"
+                android:padding="@dimen/_3sdp"
+                android:src="@drawable/ic_add"
+                app:tint="@color/whit" />
+        </LinearLayout>
+    </LinearLayout>
+
+</FrameLayout>
