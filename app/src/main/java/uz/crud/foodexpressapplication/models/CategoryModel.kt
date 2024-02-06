@@ -1,7 +1,9 @@
 package uz.crud.foodexpressapplication.models
 
 data class CategoryModel(
-    val name: String,
+    val id: Int,
+    val title: String,
     val image: String,
     var active: Boolean = false
+    //
 )

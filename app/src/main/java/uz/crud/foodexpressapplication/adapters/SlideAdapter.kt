@@ -4,10 +4,14 @@ import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.bumptech.glide.Glide
 import uz.crud.foodexpressapplication.databinding.SlideItemLayoutBinding
 import uz.crud.foodexpressapplication.models.SlideModel
+import uz.crud.foodexpressapplication.models.response.offerModel.OfferModel
+import uz.crud.foodexpressapplication.utils.Constants
+import uz.crud.foodexpressapplication.utils.loadImage
 
-class SlideAdapter(val items: List<SlideModel>) : RecyclerView.Adapter<SlideAdapter.ItemHolder>() {
+class SlideAdapter(val items: List<OfferModel>) : RecyclerView.Adapter<SlideAdapter.ItemHolder>() {
 
     inner class ItemHolder(val binding: SlideItemLayoutBinding) : ViewHolder(binding.root)
 
@@ -28,6 +32,8 @@ class SlideAdapter(val items: List<SlideModel>) : RecyclerView.Adapter<SlideAdap
 
     override fun onBindViewHolder(holder: ItemHolder, position: Int) {
         val item = items[position]
+        holder.binding.tvTitle.text = item.title
+        holder.binding.image.loadImage(item.image)
     }
 
 
