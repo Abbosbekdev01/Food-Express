@@ -1,12 +1,12 @@
 package uz.crud.foodexpressapplication.adapters
 
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import uz.crud.foodexpressapplication.databinding.CategotyItemLayoutBinding
 import uz.crud.foodexpressapplication.models.CategoryModel
+import uz.crud.foodexpressapplication.utils.loadImage
 
 class CategoryAdapter(val items: List<CategoryModel>) :
     RecyclerView.Adapter<CategoryAdapter.ItemHolder>() {
@@ -29,6 +29,8 @@ class CategoryAdapter(val items: List<CategoryModel>) :
 
     override fun onBindViewHolder(holder: ItemHolder, position: Int) {
         val item = items[position]
+        holder.binding.CategoryImage.loadImage(item.image)
+        holder.binding.tvTitle.text = item.title
     }
 
 }

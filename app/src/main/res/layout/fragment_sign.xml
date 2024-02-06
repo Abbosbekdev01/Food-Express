@@ -7,7 +7,7 @@
     android:background="@drawable/back_gradient"
     tools:context=".screens.auth.loginScreen.SignFragment">
 
-    <ScrollView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
@@ -55,6 +55,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="phone"
                     android:singleLine="true"
+                    android:textColor="@color/whit"
                     android:textColorHint="@color/grey_color" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -79,6 +80,7 @@
                     android:layout_height="wrap_content"
                     android:inputType="textPassword"
                     android:singleLine="true"
+                    android:textColor="@color/whit"
                     android:textColorHint="@color/grey_color" />
             </com.google.android.material.textfield.TextInputLayout>
 
@@ -97,13 +99,27 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/_12sdp"
-                android:gravity="center"
-                android:text="Registration"
-                android:padding="@dimen/_10sdp"
                 android:layout_marginBottom="@dimen/_30sdp"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="Registration"
                 android:textColor="@color/grey_color"
                 android:textSize="@dimen/_12ssp" />
 
         </LinearLayout>
-    </ScrollView>
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/flProgress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#65000000"
+        android:visibility="gone">
+
+        <ProgressBar
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center" />
+    </FrameLayout>
+
 </FrameLayout>
